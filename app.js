@@ -31,7 +31,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static('public'))
 
-const uri = "mongodb+srv://samiullahsaleem:samiullahsaleem@cluster0.bv5ydys.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://:@cluster0.bv5ydys.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 client.connect(err => {
   const collection = client.db("test").collection("devices");
